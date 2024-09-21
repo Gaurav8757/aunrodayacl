@@ -142,6 +142,10 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, [images]);
 
+
+
+  
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -156,7 +160,7 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
-          <a href="/" className="mr-4 text-xl font-bold">Logo</a>
+         <Image src={companyLogos} alt="Logo" width={100} height={50} />
           <nav className="hidden md:flex items-center space-x-4">
             <NavItems />
           </nav>
@@ -170,7 +174,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      <main className="container flex-1 mt-8">
+      {/* <main className="container flex-1 mt-8">
         <div className="relative">
           <Image src={images[currentImageIndex]} alt="Carousel" width={800} height={400} />
           <button className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2" onClick={prevImage}>
@@ -201,7 +205,7 @@ export default function Navbar() {
             <Image key={index} src={logo} alt={`Company Logo ${index}`} width={100} height={50} className="mx-2" />
           ))}
         </div>
-      </main>
+      </main> */}
     </div>
   );
 }
